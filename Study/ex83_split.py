@@ -1,0 +1,25 @@
+#!/usr/bin/env python3
+# MISSION: The complete set of source code for ''Python 1300: Regular
+# Expressions''.
+# STATUS: Public Release
+# VERSION: 1.0.0
+# NOTES: Project: https://github.com/TotalPythoneering/Python-1300
+# DATE: 2019-10-09 15:30:00
+# FILE: ex83_split.py
+# AUTHOR: Randall Nagy
+# File: ex83_split.py
+#
+
+import re
+
+SOURCE = "123-456-7890\n" + \
+         "ABC-456-7890\n" + \
+         "666-555-4321\n" + \
+         "555-666-4561\n"
+
+source2 = re.split('(5|6){1,3}', SOURCE)
+print(source2)    
+
+
+# Note: re.M will NOT work - like we noted!
+print(re.compile('(5|6){1,3}', re.VERBOSE))
